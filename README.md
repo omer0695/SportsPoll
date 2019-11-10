@@ -1,4 +1,4 @@
-# Solution by Omer Saleem
+# Solution by Omer Saleem - Senior Frontend Developer
 
 ## Technology Stack
 The app is created using latest version of React and Built in React state management is used for state.
