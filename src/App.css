@@ -1,22 +1,38 @@
 .App {
   text-align: center;
+  background: url('/images/bg1.jpg') no-repeat center center  #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 20px;
+  color: white;
 }
 
 .App-logo {
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #09d3ac;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  background-color: #fad32b;
+  width: 100%;
+}
+.copy{
+  background-color: #000;
+  color: #666;
+  font-size: 14px;
+  width: 85%;
+  float: right;
+  height: 40px;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 40px;
 }

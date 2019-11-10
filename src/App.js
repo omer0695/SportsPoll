@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Poll from './components/poll/Poll'
 import './App.css';
 
 function App() {
+
+  const [sportImg, setSportImg] = useState(null);
+  const currentSport = (val) => {
+    if (sportImg === null) {
+      setSportImg(val.toLowerCase() + Math.round(Math.random() * 1));
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ backgroundImage: "url(/images/" + sportImg + ".jpg)" }}>
+
+      <Poll currentSport={currentSport} />
+
+      <div className="footer">
+        <div className="copy">&copy; 2019</div>
+      </div>
+
     </div>
   );
 }
+
 
 export default App;

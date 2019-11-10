@@ -1,0 +1,300 @@
+.pollBox{
+    width: 800px;
+    max-width: 80%;
+    border: 1px solid #fad32b;
+    background: rgba(0,0,0,.8);
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.flag{
+    float: left;
+    width: 80px;
+    margin-left: 25px;
+}
+.flag img{
+    width: 80px;
+}
+.sportsName{
+    float: right;
+    margin-right: 25px;
+}
+.sportsName img {
+    -webkit-animation:spin 2s ease-out 1;
+    -moz-animation:spin 2s ease-out 1;
+    animation:spin 2s ease-out 1;
+    width: 60px;
+    animation-fill-mode: forwards;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(1440deg); } }
+@-webkit-keyframes spin { 100% {-webkit-transform: rotate(1440deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(1440deg); transform:rotate(1440deg); } }
+.clear{
+    clear: both;
+}
+.pollBox button{
+    background-color: transparent;
+    border: none;
+    margin-bottom: 14px;
+    outline-style: none;
+}
+
+.pollBox button span {
+    background: #fbc02d;
+    padding: 11px 40px;
+    color: #111111;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid #fbc02d;
+    transition: all 0.4s ease 0s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pollBox button span:hover, .pollBox button span.drawBtn{
+    border: 2px solid #fbc02d;
+    background: transparent;
+    color: #fff;
+}
+.pollBox button:focus span {
+  background-color: #7CFC00;
+  color: #000;
+}
+.hdr{
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #000;
+    box-sizing: border-box;
+    text-align: left;
+}
+.pollContent{
+    padding: 10px;
+}
+.led-green, .led-red, .led-yellow {
+    margin: 0 auto 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+.led-green{
+    background-color: #ABFF00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #ABFF00 0 2px 12px;
+}
+.led-red {
+    background-color: #FF0000;
+    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+}
+.led-yellow {
+    background-color: #FFFF00;
+    box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #FFFF00 0 2px 12px;
+}
+.hdrTxt{
+  display: inline-block;
+  max-width: 92%;
+}
+.live{
+    background-image: url('/live.png');
+    display: inline-block;
+    width: 35px;
+    height: 16px;
+    margin-left: 10px;
+}
+.hide, .matchDetail.hide{
+    display: none;
+}
+.matchDetail {
+    display: flex;
+    justify-content: center;
+}
+.matchTeams{
+    border-bottom: 1px solid #fad32b;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.matchDetail div, .matchTeams div {
+    flex-basis: 0;
+    margin-top: auto;
+    flex-grow: 1;
+}
+.vsBox {
+    font-size: 70px;
+}
+.matchDetail.results{
+    font-size: 40px;
+}
+.matchDetail.results span {
+    font-size: 20px;
+    color: #00aeef;
+}
+.matchDetail.results div{
+    padding-bottom: 10px;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    max-height: 80px;
+    height: 80px;
+  }
+  .animated.closed {
+    max-height: 0;
+    margin: 0;
+}
+@media screen and (max-width: 1000px) {
+    .matchDetail{
+        flex-direction: column;
+    }
+    .animated {
+        max-height: 200px;
+        height: 200px;
+    }
+    .matchDetail div{
+        padding-top: 10px;
+    }
+    .pollBox{
+        max-width: 95%;
+    }
+    .pollBox button{
+        margin: 0;
+        width: 100%;
+    }
+    .pollBox button span{
+        display: block;
+    }
+
+    .matchDetail.results div{
+      text-align: left;
+      padding-left: 10px;
+    }
+}
+
+@-webkit-keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -3000px, 0);
+      transform: translate3d(0, -3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 25px, 0);
+      transform: translate3d(0, 25px, 0);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, 5px, 0);
+      transform: translate3d(0, 5px, 0);
+    }
+  
+    to {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -3000px, 0);
+      transform: translate3d(0, -3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 25px, 0);
+      transform: translate3d(0, 25px, 0);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, 5px, 0);
+      transform: translate3d(0, 5px, 0);
+    }
+  
+    to {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+  }
+  
+  @-webkit-keyframes bounceOutDown {
+    20% {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    40%, 45% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -20px, 0);
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  }
+  
+  @keyframes bounceOutDown {
+    20% {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    40%, 45% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -20px, 0);
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  }
+  
+  .bounceOutDown {
+    -webkit-animation-name: bounceOutDown;
+    animation-name: bounceOutDown;
+  }
+
+  .group {
+    padding-left: 25px;
+    font-size: 14px;
+    color: #777;
+}
