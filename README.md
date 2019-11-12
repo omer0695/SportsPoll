@@ -21,6 +21,10 @@ The terminal will show both local and network URL (to test the app on mobile dev
 * 3 vote types are kept in a file called VoteTypes.js to avoid typos.
 * CSS3 media queries are added to support mobile devices screens.
 
+## Future Steps (if more time is allocated)
+- If user has casted their vote, they should not be allowed to do so again for the same match.
+- Website branding like header, logo, navigation etc.
+- Notifications if vote has been casted.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
