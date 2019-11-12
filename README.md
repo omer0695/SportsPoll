@@ -19,6 +19,7 @@ The terminal will show both local and network URL (to test the app on mobile dev
 * Sport status is shown as an LED light and if match is progress, LIVE icon is shown.
 * CSS animations for ball spin and Votes results.
 * 3 vote types are kept in a file called VoteTypes.js to avoid typos.
+* CSS3 media queries are added to support mobile devices screens.
 
 
 
